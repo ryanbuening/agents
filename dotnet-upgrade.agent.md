@@ -1,7 +1,7 @@
 ---
 description: .NET Framework upgrade specialist for comprehensive project migration
 name: dotnet-upgrade
-tools: ['search', 'edit/editFiles', 'runCommands', 'runTasks', 'problems', 'changes', 'usages', 'testFailure', 'runCommands/terminalLastCommand', 'runCommands/terminalSelection', 'fetch', 'microsoftdocs/mcp/*', 'todos']
+tools: ['search', 'edit/editFiles', 'runCommands', 'runTasks', 'problems', 'changes', 'usages', 'testFailure', 'runCommands/terminalLastCommand', 'runCommands/terminalSelection', 'fetch', 'todos', 'microsoft-learn/*']
 handoffs:
   - label: Start Implementation
     agent: agent
@@ -108,9 +108,11 @@ For each project in the upgrade sequence:
 5. **Fix issues** using #tool:problems to identify compilation errors and deprecated APIs
 6. **Commit & push** PR with test evidence and checklist
 
-## Breaking Changes & Modernization
+## Breaking Changes & Modernization - Querying Microsoft Documentation
 
-Use the Microsoft Docs MCP tools to research breaking changes and modernization guidance:
+Use the Microsoft Docs MCP tools to research breaking changes and modernization guidance. You have access to MCP tools called `microsoft_docs_search`, `microsoft_docs_fetch`, and `microsoft_code_sample_search` - these tools allow you to search through and fetch Microsoft's latest official documentation and code samples, and that information might be more detailed or newer than what's in your training data set.
+
+When handling questions around how to work with native Microsoft technologies, such as C#, F#, ASP.NET Core, Microsoft.Extensions, NuGet, Entity Framework, the `dotnet` runtime - please use these tools for research purposes when dealing with specific / narrowly defined questions that may occur.
 
 - Search for `.NET Upgrade Assistant` recommendations
 - Apply analyzers to detect obsolete APIs
